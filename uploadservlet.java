@@ -51,7 +51,7 @@ public class UploadServlet extends HttpServlet {
             PreparedStatement pstmt = null;
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                conn = DriverManager.getConnection("jdbc:mysql://localhost/shop?allowPublicKeyRetrieval=true&useSSL=false", "root", "T12345678");
+                conn = DriverManager.getConnection("jdbc:mysql://localhost/shop?allowPublicKeyRetrieval=true&useSSL=false", "root", "********");
 
                 String sql = "INSERT INTO itemtest (name, price, brand, picture) VALUES (?, ?, ?, ?)";
                 pstmt = conn.prepareStatement(sql);
